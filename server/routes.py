@@ -75,7 +75,7 @@ def log_image():
 
         ## the image ID is only generated after db.add and db.commit, so now we can create the path and
         # then update the image record in the database
-        image.path = f"images/{camera.name}/{image.id}.jpg"
+        image.path = f"server/images/{camera.name}/{image.id}.jpg"
         db.session.commit()
 
         ## save image to disk (finally)
