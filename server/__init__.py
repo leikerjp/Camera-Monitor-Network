@@ -17,6 +17,7 @@ import logging
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db' #/// => relative path from current file
+# app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {'connect_args':{'check_same_thread': False}}
 db = SQLAlchemy(app)
 
 logging.basicConfig(filename='logger.log', level=logging.DEBUG)

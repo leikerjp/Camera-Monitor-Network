@@ -14,7 +14,7 @@ class Camera(db.Model):
     images = db.relationship('Image', backref='camera_node', lazy=True)
 
     def __repr__(self):
-        return f"Camera(id='{self.id}', type='{self.name}')"
+        return f"Camera(id={self.id}, name='{self.name}')"
 
 
 class Image(db.Model):
@@ -27,4 +27,4 @@ class Image(db.Model):
     camera_id = db.Column(db.Integer, db.ForeignKey('camera.id'), nullable=False)
 
     def __repr__(self):
-        return f"Image(id='{self.id}, 'path='{self.path}', class_name='{self.class_name}', date_taken='{self.date_taken}', camera_id='{self.camera_id}')"
+        return f"Image(id={self.id}, 'path='{self.path}', class_name='{self.class_name}', date_taken='{self.date_taken}', camera_id={self.camera_id})"

@@ -1,10 +1,1 @@
-{
-  "id" : 0,
-  "name" : "RPi3-0",
-  "camera_settings" :
-  {
-    "width" : 2592,
-    "height" : 1458,
-    "framerate" : 10
-  }
-}
+{"id": 0, "name": "RPi3-0", "camera_settings": {"width": 1920, "height": 1080, "framerate": 10}}

@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for camera in cameras %}
+       <a class="nav-item nav-link" href="{{ url_for('images', id=camera.id) }}">{{ camera.name }}</a>
+    {% endfor %}
+{% endblock content %}
